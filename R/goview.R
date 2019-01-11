@@ -9,8 +9,7 @@
 #' goview()
 
 goview <- function(goresults){
-  library(ggplot2)
-  ggplot(data=goresults, aes(x=reorder(term.name, -p.value), y=overlap.size,fill=p.value)) +
+    ggplot2::ggplot(data=goresults, aes(x=reorder(term.name, -p.value), y=overlap.size,fill=p.value)) +
     geom_bar(stat="identity")+
     scale_fill_gradient2(mid='red', high='blue', space='Lab')+
     labs(title="GO enrichment",
