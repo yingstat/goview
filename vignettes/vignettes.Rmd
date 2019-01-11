@@ -1,0 +1,32 @@
+---
+title: "Vignette for goview"
+author: "yingying"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette for goview}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+goview is a function package to view the results from gProfileR
+
+## GO list from gProfileR
+```{r, eval=F, echo=T}
+go <- read.csv(file = "UP_GO.csv", header = TRUE)
+knitr::kable(head(go, 10))
+```
+
+## Use goview
+
+```{r, eval=F, echo=T}
+goview(go)
+```
+
